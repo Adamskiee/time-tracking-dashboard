@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary */
+  --purple-600: hsl(246, 80%, 60%);
+  --orange-300: hsl(15, 100%, 70%);
+  --blue-300: hsl(195, 74%, 62%);
+  --pink-400: hsl(348, 100%, 68%);
+  --green-400: hsl(145, 58%, 55%);
+  --purple-700: hsl(264, 64%, 52%);
+  --yellow-300: hsl(43, 84%, 65%);
+
+  /* Neutral */
+  --navy-950: hsl(226, 43%, 10%);
+  --navy-900: hsl(235, 46%, 20%);
+  --purple-500: hsl(235, 45%, 61%);
+  --navy-200: hsl(236, 100%, 87%);
+  --navy-500: hsl(236 41% 34%);
+
+  --card-radius: 1rem;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url(../fonts/Rubik-VariableFont_wght.ttf);
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url(../fonts/Rubik-VariableFont_wght.ttf);
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url(../fonts/Rubik-VariableFont_wght.ttf);
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+
+@layer components {
+  .container {
+    @apply max-w-[326px] grid grid-cols-1 gap-6 desktop:grid-cols-4 desktop:grid-rows-2 desktop:max-w-[1110px] desktop:gap-[30px];
+  }
+  .card-1 {
+    @apply bg-navy-900 flex flex-col rounded-card-radius desktop:row-span-2;
+  }
+  .card-1 .profile {
+    @apply grid grid-cols-[70px_1fr] grid-rows-2 bg-purple-600 rounded-card-radius px-7 py-[31.5px] gap-x-[17.5px] items-center desktop:grid-cols-1 desktop:grid-rows-[auto_auto_1fr] desktop:py-[34px] desktop:gap-y-[0px] desktop:pt-[34px] desktop:pb-[80px] desktop:justify-center cursor-default;
+  }
+  .profile .picture {
+    @apply row-span-2 border-[3px] rounded-[50%] desktop:w-full desktop:max-w-[85px] desktop:row-span-1 desktop:mb-[39px];
+  }
+  .profile .name {
+    @apply order-1;
+  }
+  .card-1 .filters {
+    @apply flex px-6 pt-2.5 pb-[39px] items-center justify-between desktop:flex-col desktop:items-start desktop:justify-between desktop:p-[22px] desktop:ps-[26px] desktop:gap-[20px];
+  }
+
+  .card-2 {
+    @apply flex flex-col relative pt-[39px] overflow-hidden rounded-card-radius desktop:pt-[49px];
+  }
+  .card-2 .icon {
+    @apply absolute -top-[11px] right-[18px] aspect-auto;
+  }
+  .card-2 .content {
+    @apply grid grid-cols-2 grid-rows-2 bg-navy-900 rounded-t-card-radius px-6 pt-6 pb-7 items-center leading-none gap-x-0.5 z-10 desktop:gap-y-2 desktop:h-full;
+  }
+
+  .card-2 .ellipsis {
+    @apply justify-self-end;
+  }
+
+  .work-card {
+    @apply bg-orange-300;
+  }
+  .play-card {
+    @apply bg-blue-300;
+  }
+  .study-card {
+    @apply bg-pink-400;
+  }
+  .exercise-card {
+    @apply bg-green-400;
+  }
+  .social-card {
+    @apply bg-purple-700;
+  }
+  .self-care-card {
+    @apply bg-yellow-300;
+  }
+
+  /* Text styles */
+  .profile .label {
+    @apply text-[15px] leading-none desktop:text-[16px]
+    
+  }
+  .profile .name {
+    @apply text-2xl self-start leading-none desktop:text-[40px] desktop:leading-[1.25];
+  }
+  .filter-text {
+    font-size: 18px;
+    color: var(--purple-500);
+  }
+  .title {
+    @apply text-[18px] font-medium 
+  }
+  .hrs {
+    @apply text-[2rem] font-light desktop:text-[3.4375rem] desktop:col-span-2;
+  }
+  .wk-hrs {
+    @apply text-[15px] text-navy-200 justify-self-end desktop:col-span-2 desktop:justify-self-start;
+  }
+}
+
+@layer utilities {
+  .content {
+    @apply hover:bg-navy-500 cursor-pointer;
+  }
+  .filter-text {
+    @apply hover:text-white cursor-pointer;
+  }
+  .ellipsis {
+    @apply hover:brightness-200;
+  }
+  .content:has(.ellipsis:hover) {
+    background: var(--navy-900);
+  }
+}

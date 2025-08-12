@@ -47,26 +47,29 @@
 
 @layer components {
   .container {
-    @apply max-w-[326px] grid grid-cols-1 gap-6 desktop:grid-cols-4 desktop:grid-rows-2 desktop:max-w-[1110px] desktop:gap-[30px];
+    @apply grid grid-cols-1 desktop:grid-cols-4 desktop:grid-rows-2 md:grid-cols-2;
+    gap: clamp(1.5rem, 1.368rem + 0.563vw, 1.875rem);
+    max-width: clamp(20.375rem, 3.121rem + 73.615vw, 69.375rem);
   }
   .card-1 {
-    @apply bg-navy-900 flex flex-col rounded-card-radius desktop:row-span-2;
+    @apply bg-navy-900 flex flex-col rounded-card-radius desktop:row-span-2 md:row-span-2;
   }
   .card-1 .profile {
-    @apply grid grid-cols-[70px_1fr] grid-rows-2 bg-purple-600 rounded-card-radius px-7 py-[31.5px] gap-x-[17.5px] items-center desktop:grid-cols-1 desktop:grid-rows-[auto_auto_1fr] desktop:py-[34px] desktop:gap-y-[0px] desktop:pt-[34px] desktop:pb-[80px] desktop:justify-center cursor-default;
+    @apply grid grid-cols-[70px_1fr] grid-rows-2 bg-purple-600 rounded-card-radius px-7 py-[1.96875rem] gap-x-[1.09375rem] items-center desktop:grid-cols-1 desktop:grid-rows-[auto_auto_1fr] desktop:gap-y-[0px] desktop:pt-[2.125rem] desktop:pb-[5rem] cursor-default md:grid-rows-[auto_auto] md:gap-y-0 md:h-full;
   }
   .profile .picture {
-    @apply row-span-2 border-[3px] rounded-[50%] desktop:w-full desktop:max-w-[85px] desktop:row-span-1 desktop:mb-[39px];
+    @apply row-span-2 border-[0.1875rem] rounded-[50%] desktop:w-full desktop:max-w-[85px] desktop:row-span-1 desktop:mb-[2.4375rem];
   }
   .profile .name {
     @apply order-1;
   }
   .card-1 .filters {
-    @apply flex px-6 pt-2.5 pb-[39px] items-center justify-between desktop:flex-col desktop:items-start desktop:justify-between desktop:p-[22px] desktop:ps-[26px] desktop:gap-[20px];
+    @apply flex px-6 pt-2.5 pb-[2.4375rem] items-center justify-between md:flex-col md:items-start md:justify-between md:p-[1.375rem] md:ps-[1.625rem] md:gap-5 h-full;
   }
 
   .card-2 {
-    @apply flex flex-col relative pt-[39px] overflow-hidden rounded-card-radius desktop:pt-[49px];
+    @apply flex flex-col overflow-hidden rounded-card-radius relative;
+    padding-block-start: clamp(2.4375rem, 2.217rem + 0.939vw, 3.0625rem);
   }
   .card-2 .icon {
     @apply absolute -top-[11px] right-[18px] aspect-auto;
@@ -100,24 +103,27 @@
 
   /* Text styles */
   .profile .label {
-    @apply text-[15px] leading-none desktop:text-[16px]
+    @apply leading-none;
+    font-size:  clamp(0.9375rem, 0.915rem + 0.094vw, 1rem);
     
   }
   .profile .name {
-    @apply text-2xl self-start leading-none desktop:text-[40px] desktop:leading-[1.25];
+    @apply self-start leading-none desktop:leading-[1.25];
+    font-size: clamp(1.5rem, 1.148rem + 1.502vw, 2.5rem);
   }
   .filter-text {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--purple-500);
   }
   .title {
-    @apply text-[18px] font-medium 
+    @apply text-[1.125rem] font-medium 
   }
   .hrs {
-    @apply text-[2rem] font-light desktop:text-[3.4375rem] desktop:col-span-2;
+    @apply  font-light desktop:col-span-2;
+    font-size: clamp(2rem, 1.494rem + 2.16vw, 3.438rem);
   }
   .wk-hrs {
-    @apply text-[15px] text-navy-200 justify-self-end desktop:col-span-2 desktop:justify-self-start;
+    @apply text-[0.9375rem] text-navy-200 justify-self-end desktop:col-span-2 desktop:justify-self-start;
   }
 }
 

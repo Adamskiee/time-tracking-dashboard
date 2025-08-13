@@ -40,7 +40,7 @@ const generateHr = (hr) => {
 
 const getData = async () => {
     try{
-        return (await fetch('/data.json')).json();
+        return (await fetch('./data.json')).json();
     }catch(err) {
         return null;
     }

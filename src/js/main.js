@@ -1,13 +1,13 @@
 const currents = document.querySelectorAll(".current-hrs");
-const previouses = document.querySelectorAll(".previous-hrs")
+const previouses = document.querySelectorAll(".previous-hrs");
 const previousTimes = document.querySelectorAll(".previous-time");
 const filters = document.getElementById("filters");
 
-let currentRange = "weekly"
+let currentRange = "weekly";
 
 const setActive = (btn) => {
     filters.querySelectorAll(".filter-btn.active").forEach((active) => {
-        active.classList.remove('active')    
+        active.classList.remove('active');
     });
     btn.classList.add('active');
     updateDashboard();
@@ -27,13 +27,13 @@ const updateDashboard = async () => {
 
 const generateHr = (hr) => {
     if(hr > 1) {
-        hr = hr+"hrs"
+        hr = hr+"hrs";
     }
     else if(hr > 0) {
-        hr = hr+"hr"
+        hr = hr+"hr";
     }
     else {
-        hr = "N/A"
+        hr = "N/A";
     }
     return hr;
 }
@@ -56,5 +56,5 @@ filters.addEventListener('click', (e) => {
     setActive(btn);
 })
 
-const initial = filters.querySelector(`[data-range="${currentRange}"]`)
+const initial = filters.querySelector(`[data-range="${currentRange}"]`);
 setActive(initial);

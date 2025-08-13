@@ -124,7 +124,7 @@
     font-size: clamp(2rem, 1.494rem + 2.16vw, 3.438rem);
   }
   .wk-hrs {
-    @apply text-[0.9375rem] text-navy-200 justify-self-end desktop:col-span-2 desktop:justify-self-start whitespace-nowrap md:text-[0.875rem] desktop:text-[0.9375rem];
+    @apply text-[0.9375rem] text-navy-200 justify-self-end desktop:col-span-2 desktop:justify-self-start whitespace-nowrap md:text-[0.8125rem] desktop:text-[0.9375rem];
   }
 }
 

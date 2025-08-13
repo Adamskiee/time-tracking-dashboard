@@ -38,6 +38,6 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
-*.md
 design
 temp.txt
+*guide.md

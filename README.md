@@ -36,9 +36,9 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub URL](https://github.com/Adamskiee/time-tracking-dashboard)
+- Solution URL: [GitHub URL](https://github.com/adamskiee-frontendmentor-projects/time-tracking-dashboard)
 - Figma Solution URL: [Figma URL](https://www.figma.com/design/zIN2vOL2pFP3WaIOxfXDol/Time-Tracking-Dashboard---Fronendmaster?node-id=0-1&p=f&t=RmB7iPN8HSLiNOO1-0)
-- Live Site URL: [Live Site URL](https://adamskiee.github.io/newsletter-sign-up)
+- Live Site URL: [Live Site URL](https://adamskiee-frontendmentor-projects.github.io/newsletter-sign-up)
 
 ## My process
 
